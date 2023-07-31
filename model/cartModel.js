@@ -16,6 +16,9 @@ const cartSchema = new mongoose.Schema({
   brandName: {
     type: String,
   },
+  image: {
+    type: String,
+  },
 });
 
 const Cart = mongoose.model("Cart", cartSchema);
