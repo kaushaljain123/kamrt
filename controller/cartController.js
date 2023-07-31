@@ -20,3 +20,13 @@ exports.addToCart = async (req, res) => {
     res.json({ status: true, message: "Server Error!" });
   }
 };
+
+exports.getAllCartItem = async (req, res) => {
+  let cartItem = await Cart.find();
+
+  if (cartItem) {
+    res.json({ status: true, message: "Cart Find Successfully!" });
+  } else {
+    res.json({ status: true, message: "Server Error!" });
+  }
+};
