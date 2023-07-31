@@ -25,7 +25,11 @@ exports.getAllCartItem = async (req, res) => {
   let cartItem = await Cart.find();
 
   if (cartItem) {
-    res.json({ status: true, message: "Cart Find Successfully!" });
+    res.json({
+      status: true,
+      message: "Cart Find Successfully!",
+      data: cartItem,
+    });
   } else {
     res.json({ status: true, message: "Server Error!" });
   }
