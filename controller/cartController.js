@@ -9,6 +9,7 @@ exports.addToCart = async (req, res) => {
     stocks: stocks,
     description: description,
     brandName: brandName,
+    image: image,
   });
 
   const cartValue = await cart.save();
