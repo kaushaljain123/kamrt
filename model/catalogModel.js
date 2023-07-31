@@ -29,6 +29,10 @@ const catalogSchema = new mongoose.Schema({
     type: String,
     require: true,
   },
+  catalogImage: {
+    type: String,
+    require: true,
+  },
 });
 
 const Catalog = mongoose.model("Catalog", catalogSchema);
