@@ -8,6 +8,7 @@ const catalog = require("./routes/catalog");
 const user = require("./routes/user");
 const upload = require("./routes/upload");
 const cart = require("./routes/cart");
+const order = require("./routes/order");
 
 // Load env vars
 dotenv.config({ path: "./config/config.env" });
@@ -23,6 +24,7 @@ app.use("/api/v1/catalog", catalog);
 app.use("/api/v1/user", user);
 app.use("/api/v1/upload", upload);
 app.use("/api/v1/cart", cart);
+app.use("/api/v1/order", order);
 
 app.use("/upload", express.static("upload"));
 
